@@ -1,10 +1,21 @@
-// ボタンを取得
-const button = document.getElementById("changeColorBtn");
+console.log("JS loaded ✅"); // 読み込み確認用ログ
 
-// ボタンがクリックされたときの動きを設定
-button.addEventListener("click", function() {
-  // ページ全体の背景色を変更
-  document.body.style.backgroundColor = getRandomColor();
+// ページが読み込まれてから実行
+document.addEventListener("DOMContentLoaded", () => {
+  const button = document.getElementById("changeColorBtn");
+  
+  if (!button) {
+    console.warn("⚠️ ボタンが見つかりません（idを確認してください）");
+    return;
+  }
+
+  console.log("ボタンを検出しました 🎯");
+
+  button.addEventListener("click", () => {
+    const color = getRandomColor();
+    document.body.style.backgroundColor = color;
+    console.log("背景色を変更しました →", color);
+  });
 });
 
 // ランダムな色を作る関数
