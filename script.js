@@ -24,3 +24,14 @@ function getRandomColor() {
   const randomIndex = Math.floor(Math.random() * colors.length);
   return colors[randomIndex];
 }
+// スクロールボタンの動き
+const scrollBtn = document.getElementById("scrollBtn");
+if (scrollBtn) {
+  scrollBtn.addEventListener("click", () => {
+    const aboutSection = document.getElementById("about");
+    aboutSection.scrollIntoView({ behavior: "smooth" });
+  });
+} else {
+  console.warn("scrollBtn が見つかりません。index.html内のidを確認してね。");
+}
+
