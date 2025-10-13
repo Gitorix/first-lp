@@ -25,13 +25,18 @@ function getRandomColor() {
   return colors[randomIndex];
 }
 // スクロールボタンの動き
-const scrollBtn = document.getElementById("scrollBtn");  // ← Lを2つに
-if (scrollBtn) {
-  scrollBtn.addEventListener("click", () => {
-    const aboutSection = document.getElementById("about");
-    aboutSection.scrollIntoView({ behavior: "smooth" });
-  });
-} else {
-  console.warn("scrollBtnが見つかりません。index.html内のidを確認してね。");
-}
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollBtn = document.getElementById("scrollBtn");
+
+  if (scrollBtn) {
+    scrollBtn.addEventListener("click", () => {
+      const aboutSection = document.getElementById("about");
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+      console.log("✅ スクロール実行");
+    });
+  } else {
+    console.warn("⚠️ scrollBtn が見つかりません。index.html の id を確認してね。");
+  }
+});
+
 
