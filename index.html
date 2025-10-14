@@ -10,16 +10,23 @@
 </head>
 <body class="text-gray-800">
   <header class="bg-white">
-    <div class="max-w-3xl mx-auto px-6 py-16 text-center">
+    <header class="bg-white">
+  <div class="max-w-3xl mx-auto px-6 py-16 text-center">
       <h1 class="text-4xl font-bold">ようこそ！</h1>
       <p class="mt-4 text-lg">これは更新後のLPです。</p>
       <!-- 背景色変更ボタン -->
-<button id="changeColorBtn" class="mt-6 bg-black text-white px-6 py-3 rounded-lg">
+<button id="changeColorBtn" class="mt-6 bg-black text-white px-6 py-3 rounded-lg
+         transition transform duration-200
+         hover:scale-105 hover:bg-gray-900
+         active:scale-95 focus:outline-none focus:ring-2 focus:ring-black/30">
   背景の色を変える🎨
 </button>
 
 <!-- スクロールボタン -->
-<button id="scrollBtn" class="mt-4 bg-blue-500 text-white px-6 py-3 rounded-lg">
+<button id="scrollBtn"  class="mt-4 bg-blue-500 text-white px-6 py-3 rounded-lg
+         transition transform duration-200
+         hover:scale-105 hover:bg-blue-600
+         active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-300">
   説明を見る👇
 </button>
 
@@ -28,14 +35,21 @@
     </div>
   </header>
   <section id="about" class="mt-16 max-w-3xl mx-auto px-6 text-center">
-  <h2 class="text-2xl font-bold">このLPについて</h2>
+  <h2 class="text-2xl font-bold
+           fade-in opacity-0 translate-y-6 transition-all duration-700">
+  このLPについて
+</h2>
+
   <p class="mt-3 text-gray-600">HTML＋CSS＋JSの連携を学ぶサンプルです。</p>
 </section>
 
 
 <!-- 👇 スクロール確認用のダミー要素（aboutの直後に追加） -->
 <div class="h-[150vh] bg-gray-100 mt-16 flex items-center justify-center">
-  <p class="text-lg text-gray-500">⬆️ 上のボタンを押すとここまでスクロールしてきます</p>
+  <p class="mt-3 text-gray-600
+          fade-in opacity-0 translate-y-6 transition-all duration-700">
+  HTML＋CSS＋JSの連携を学ぶサンプルです。
+</p>
 </div>
 
   <footer class="text-center text-sm text-gray-500 py-8">
