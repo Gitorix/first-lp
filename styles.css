@@ -1,5 +1,6 @@
 html { scroll-behavior: smooth; }
 body { font-family: "Hiragino Kaku Gothic ProN", sans-serif; }
+/* ユーザー優先設定（やさしさ設定） */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -8,15 +9,13 @@ body { font-family: "Hiragino Kaku Gothic ProN", sans-serif; }
     scroll-behavior: auto !important;
   }
 }
-/* フェードイン効果 */
-.fade-in {
-  opacity: 0;
-  transform: translateY(1.5rem);
-  transition: all 0.8s ease-out;
+
+/* フェードイン用 */
+.fade-in { 
+  opacity: 0; 
+  transform: translateY(1.5rem); 
+  transition: all 0.8s ease-out; 
 }
-.opacity-100 {
-  opacity: 1;
-}
-.translate-y-0 {
-  transform: translateY(0);
-}
+.opacity-100 { opacity: 1; }
+.translate-y-0 { transform: translateY(0); }
+
