@@ -16,7 +16,15 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.backgroundColor = color;
     console.log("背景色を変更しました →", color);
   });
-});
+const hero = document.getElementById("hero");
+if (hero) {
+  hero.classList.add("opacity-100", "translate-y-0");
+  console.log("ヒーローをフェードインしました ✨");
+} else {
+  console.warn("⚠️ ヒーロー要素が見つかりません（#hero）");
+}
+
+
 
 // ランダムな色を作る関数
 function getRandomColor() {
