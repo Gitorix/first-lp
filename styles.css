@@ -1,6 +1,7 @@
 html { scroll-behavior: smooth; }
 body { font-family: "Hiragino Kaku Gothic ProN", sans-serif; }
-/* ユーザー優先設定（やさしさ設定） */
+
+/* ユーザー優先（やさしさ設定） */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -10,23 +11,12 @@ body { font-family: "Hiragino Kaku Gothic ProN", sans-serif; }
   }
 }
 
-/* フェードイン用 */
-.fade-in { 
-  opacity: 0; 
-  transform: translateY(1.5rem); 
-  transition: all 1.5s ease-out; 
-}
+/* フェードインの基本 */
+.fade-in { opacity: 0; transform: translateY(1.5rem); transition: all 1.2s ease-out; }
+/* 仕上がり状態のユーティリティ */
 .opacity-100 { opacity: 1; }
 .translate-y-0 { transform: translateY(0); }
 
-/* ヒーローの初期状態とアニメ後の状態 */
-#hero {
-  opacity: 0;
-  transform: translateY(1.5rem);
-  transition: all 1.5s ease-out;
-}
-
-#hero.is-shown {
-  opacity: 1;
-  transform: translateY(0);
-}
+/* ヒーローの初期→完了 */
+#hero { opacity: 0; transform: translateY(1.5rem); transition: all 1.2s ease-out; }
+#hero.is-shown { opacity: 1; transform: translateY(0); }
