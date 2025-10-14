@@ -19,3 +19,14 @@ body { font-family: "Hiragino Kaku Gothic ProN", sans-serif; }
 .opacity-100 { opacity: 1; }
 .translate-y-0 { transform: translateY(0); }
 
+/* ヒーローの初期状態とアニメ後の状態 */
+#hero {
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition: all 0.8s ease-out;
+}
+
+#hero.is-shown {
+  opacity: 1;
+  transform: translateY(0);
+}
