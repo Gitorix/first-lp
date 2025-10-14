@@ -1,41 +1,59 @@
+// ===================================
+// ページ読み込み完了時の処理
+// ===================================
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("JS loaded ✅");
+  console.log("✅ JS loaded");
 
-  // === 背景色ボタン ===
-  const colorBtn = document.getElementById("changeColorBtn");
-  if (colorBtn) {
-    colorBtn.addEventListener("click", () => {
-      const colors = ["#ffdada", "#ffd6a5", "#caffbf", "#9bf6ff", "#bdb2ff"];
-      const color = colors[Math.floor(Math.random() * colors.length)];
+  // ------------------------------
+  // 背景色変更ボタンの動き
+  // ------------------------------
+  const button = document.getElementById("changeColorBtn");
+  if (button) {
+    console.log("🎯 背景色変更ボタンを検出しました");
+    button.addEventListener("click", () => {
+      const color = getRandomColor();
       document.body.style.backgroundColor = color;
-      console.log("背景色を変更しました →", color);
+      console.log("🎨 背景色を変更:", color);
     });
   } else {
-    console.warn("⚠️ changeColorBtn が見つかりません（index.html の id を確認してね）");
+    console.warn("⚠️ 背景色変更ボタン（id='changeColorBtn'）が見つかりません");
   }
 
-  // === ヒーローをフェードイン（#hero がある想定） ===
+  // ------------------------------
+  // ヒーローセクションをフェードイン
+  // ------------------------------
   const hero = document.getElementById("hero");
   if (hero) {
     hero.classList.add("is-shown");
-    console.log("ヒーローをフェードインしました ✨");
+    console.log("✨ ヒーローをフェードインしました");
   } else {
-    console.warn("⚠️ ヒーロー要素（#hero）が見つかりません");
+    console.warn("⚠️ #hero が見つかりません（index.html を確認）");
   }
 
-  // === スクロールボタン ===
+  // ------------------------------
+  // スクロールボタンの動き
+  // ------------------------------
   const scrollBtn = document.getElementById("scrollBtn");
   if (scrollBtn) {
     scrollBtn.addEventListener("click", () => {
-      const about = document.getElementById("about");
-      if (about) {
-        about.scrollIntoView({ behavior: "smooth" });
+      const aboutSection = document.getElementById("about");
+      if (aboutSection) {
+        aboutSection.scrollIntoView({ behavior: "smooth" });
         console.log("✅ スクロール実行");
       } else {
-        console.warn("⚠️ #about が見つかりません（id を確認してね）");
+        console.warn("⚠️ #about が見つかりません（index.html を確認）");
       }
     });
   } else {
-    console.warn("⚠️ scrollBtn が見つかりません。index.html の id を確認してね。");
+    console.warn("⚠️ scrollBtn が見つかりません（index.html を確認）");
   }
-}); // ← これで DOMContentLoaded を締める（最後はこれだけ）
+});
+
+// ===================================
+// ランダムな色を作る関数
+// ===================================
+function getRandomColor() {
+  const colors = ["#ffadad", "#ffd6a5", "#caffbf", "#9bf6ff", "#bdb2ff"];
+  const randomIndex = Math.floor(Math.random() * colors.length);
+  return colors[randomIndex];
+}
