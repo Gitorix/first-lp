@@ -14,7 +14,7 @@ body { font-family: "Hiragino Kaku Gothic ProN", sans-serif; }
 .fade-in { 
   opacity: 0; 
   transform: translateY(1.5rem); 
-  transition: all 0.8s ease-out; 
+  transition: all 1.5s ease-out; 
 }
 .opacity-100 { opacity: 1; }
 .translate-y-0 { transform: translateY(0); }
@@ -23,7 +23,7 @@ body { font-family: "Hiragino Kaku Gothic ProN", sans-serif; }
 #hero {
   opacity: 0;
   transform: translateY(1.5rem);
-  transition: all 0.8s ease-out;
+  transition: all 1.5s ease-out;
 }
 
 #hero.is-shown {
