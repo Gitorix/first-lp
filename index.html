@@ -1,63 +1,46 @@
 <!doctype html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>はじめてのLP</title>
-    <meta name="description" content="これは自作のランディングページです！" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>first-lp</title>
+  <link rel="stylesheet" href="./style.css?v=9" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">first-lp</h1>
+      <nav class="nav">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
 
-  <body class="text-gray-800">
-    <header class="bg-white">
-      <!-- ヒーロー -->
-      <div id="hero" class="max-w-3xl mx-auto px-6 py-16 text-center fade-in">
-        <h1 class="text-4xl font-bold">ようこそ！</h1>
-        <p class="mt-4 text-lg">これは更新後のLPです。</p>
-
-        <!-- 背景色変更ボタン -->
-        <button
-          id="changeColorBtn"
-          class="mt-6 bg-black text-white transition transform duration-200
-                 hover:scale-105 hover:bg-gray-900 active:scale-95
-                 focus:outline-none focus:ring-2 focus:ring-black/30 rounded-lg px-5 py-3"
-        >
-          背景の色を変える🎨
-        </button>
-
-        <!-- スクロールボタン -->
-        <button
-          id="scrollBtn"
-          class="mt-4 bg-blue-500 text-white transition transform duration-200
-                 hover:scale-105 hover:bg-blue-600 active:scale-95
-                 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg px-5 py-3"
-        >
-          説明を見る👇
-        </button>
+  <main>
+    <section id="hero" class="fade-in">
+      <div class="container">
+        <h2>Hero Section</h2>
+        <p>これは first-lp のヒーローです。</p>
+        <a class="cta" href="#about">もっと見る</a>
       </div>
-    </header>
-
-    <!-- 説明セクション -->
-    <section id="about" class="mt-16 max-w-3xl mx-auto px-6 text-center">
-      <h2 class="text-2xl font-bold fade-in opacity-0 translate-y-6 transition-all duration-700">
-        このLPについて
-      </h2>
-      <p class="mt-3 text-gray-600">
-        HTML＋CSS＋JSの連携を学ぶサンプルです。
-      </p>
     </section>
 
-    <!-- ダミースペース（スクロール体験用・不要なら削除OK） -->
-    <div class="h-[150vh] bg-gray-50 mt-16 flex items-center justify-center">
-      <p class="text-gray-500">上の「説明を見る👇」を押すとここまでスムーズに移動します。</p>
+    <section id="about">
+      <div class="container">
+        <h3>About</h3>
+        <p>説明テキストをここに記載します。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; 2025 first-lp</small>
     </div>
+  </footer>
 
-    <footer class="text-center text-sm text-gray-500 py-8">
-      © ITORIXXX 2025
-    </footer>
-
-    <!-- JSは必ず body の最後で読み込む（キャッシュ回避の v=4） -->
-    <script src="./script.js?v=4"></script>
-  </body>
+  <!-- ※必ず body 直前に1回だけ -->
+  <script src="./script.js?v=9"></script>
+</body>
 </html>
