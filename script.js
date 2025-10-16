@@ -1,6 +1,5 @@
 console.log("JS loaded ✅");
 
-// 失敗検知（CSSが適用されていなければ警告）
 (function () {
   const hasLink = !!document.querySelector('link[rel="stylesheet"][href*="style.css"]');
   const fam = getComputedStyle(document.body).fontFamily || "";

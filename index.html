@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>first-lp</title>
 
-  <!-- JSが有効なら <html> に js クラスを付与（JSが死んでも描画は消えない設計） -->
   <script>
     document.documentElement.classList.remove('no-js');
     document.documentElement.classList.add('js');
   </script>
 
-  <link rel="stylesheet" href="./style.css?v=11" />
+  <link rel="stylesheet" href="./style.css?v=12" />
 </head>
 <body>
   <header class="site-header">
@@ -25,7 +24,6 @@
   </header>
 
   <main>
-    <!-- JS が .is-shown を付与してフェードイン -->
     <section id="hero" class="fade-in">
       <div class="container">
         <h2>Hero Section</h2>
@@ -48,7 +46,6 @@
     </div>
   </footer>
 
-  <!-- ※必ず body 直前・1回だけ -->
-  <script src="./script.js?v=11"></script>
+  <script src="./script.js?v=12"></script>
 </body>
 </html>
