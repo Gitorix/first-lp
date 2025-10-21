@@ -1,57 +1,39 @@
 <!doctype html>
 <html lang="ja" class="no-js">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>first-lp</title>
-    <!-- 共通の黒白アイコン -->
-  <link rel="icon" type="image/svg+xml" href="https://gitorix.github.io/re-black.svg">
 
-  <!-- LP専用のゴールド版（優先して適用される） -->
-  <link rel="alternate icon" type="image/svg+xml" href="https://gitorix.github.io/re-gold.svg">
+  <!-- 既存のfaviconリンクはそのままでOK -->
 
-
-  <script>
-    document.documentElement.classList.remove('no-js');
-    document.documentElement.classList.add('js');
-  </script>
-
-  <link rel="stylesheet" href="./style.css?v=12" />
+  <link rel="stylesheet" href="./style.css?v=13" />
 </head>
 <body>
+
   <header class="site-header">
-    <div class="container">
-      <h1 class="logo">first-lp</h1>
-      <nav class="nav">
-        <a href="#hero">Home</a>
-        <a href="#about">About</a>
-      </nav>
-    </div>
+    <nav class="nav">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+    </nav>
   </header>
 
   <main>
     <section id="hero" class="fade-in">
-      <div class="container">
-        <h2>Hero Section</h2>
-        <p>これは first-lp のヒーローです。</p>
-        <a class="cta" href="#about">もっと見る</a>
-      </div>
+      <h1>Hero Section</h1>
+      <p>これは first-lp のヒーローです。</p>
+      <a class="cta" href="#about">もっと見る</a>
     </section>
 
     <section id="about">
-      <div class="container">
-        <h3>About</h3>
-        <p>説明テキストをここに記載します。</p>
-      </div>
+      <h2>About</h2>
+      <p>説明テキストをここに記載します。</p>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <small>&copy; 2025 first-lp</small>
-    </div>
-  </footer>
+  <footer>© 2025 first-lp</footer>
 
-  <script src="./script.js?v=12"></script>
+  <!-- 必ず body の直前で一回だけ -->
+  <script src="./script.js?v=13"></script>
 </body>
 </html>

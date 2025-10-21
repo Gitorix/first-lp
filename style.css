@@ -11,27 +11,21 @@ body {
 .logo { font-size:20px; margin:0; letter-spacing:.02em; }
 .nav a { margin-left:16px; text-decoration:none; color:#333; }
 
-/* “消えない”設計 */
+/* JSが無くても“見える”初期状態（no-js） */
 #hero {
-  opacity:1;
-  transform:none;
-  transition: all 1.5s ease-out;
-  min-height:64vh;
-  display:grid; place-items:center; text-align:center;
-  background: linear-gradient(180deg, #f7f9ff 0%, #fff 100%);
+  opacity: 1;
+  transform: none;
+  transition: all 2s ease-out;
 }
-.js #hero { opacity:0; transform:translateY(12px); }
-#hero.is-shown { opacity:1; transform:none; }
 
-.fade-in { transition: all 1.5s ease-out; }
+/* JSが有効になったら開始位置に寄せる（最初だけ非表示＆少し下へ） */
+.js #hero {
+  opacity: 0;
+  transform: translateY(12px);
+}
 
-#hero h2 { font-size: clamp(28px, 5vw, 44px); margin: 0 0 8px; }
-#hero p  { font-size: clamp(15px, 2.6vw, 18px); margin: 0 0 22px; color:#444; }
-.cta { display:inline-block; padding:12px 20px; border-radius:10px; border:1px solid #111; text-decoration:none; color:#111; }
-
-#about { padding:56px 0 80px; }
-.site-footer { border-top:1px solid #eee; padding:22px 0; margin-top:40px; background:#fff; }
-
-@media (prefers-reduced-motion: reduce){
-  #hero, #hero.is-shown, .fade-in { transition:none }
+/* フェードイン完了状態（JSが .is-shown を付与） */
+#hero.is-shown {
+  opacity: 1;
+  transform: none;
 }
