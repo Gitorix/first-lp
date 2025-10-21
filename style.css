@@ -29,3 +29,4 @@ body {
   opacity: 1;
   transform: none;
 }
+html { outline: 4px solid red; }
